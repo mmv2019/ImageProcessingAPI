@@ -6,12 +6,12 @@ It is using express server to load images from the folder and Resize the image a
 
 ### Technologies used
 
-Typescript
-Jasmine
-Express
-Prettier
-ESlint
-Sharp --> npm dependency used for resize
+* Typescript
+* Jasmine
+* Express
+* Prettier
+* ESlint
+* Sharp --> npm dependency used for resize
 
 ### How does the app work?
 
