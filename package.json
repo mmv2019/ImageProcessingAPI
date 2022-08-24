@@ -1,0 +1,41 @@
+{
+  "name": "newapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "jasmine": "jasmine",
+    "start": "nodemon src/index.ts",
+    "lint": "eslint '*/**/*.{js,ts}' --fix",
+    "test": "npm run build && npm run jasmine",
+    "prettier": "prettier --write"
+  },
+  "author": "maryam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jasmine": "^4.3.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "module-name": "^0.0.1-security",
+    "sharp": "^0.30.7",
+    "supertest": "^6.2.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jasmine": "^4.3.0",
+    "@types/nodemon": "^1.19.2",
+    "@types/sharp": "^0.28.3",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "keywords": [],
+  "description": ""
+}
