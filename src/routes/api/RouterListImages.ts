@@ -8,7 +8,7 @@ RouterListImages.get('/', async (_req: Request, res: Response): Promise<void> =>
     const imageFolderPath = `${path.resolve(__dirname, '../../../assets/Old')}`;
 
     const Listfiles: string[] | null = await fs.readdir(imageFolderPath).catch(() => {
-        res.status(500).send('Error occured reading the images');
+        res.status(500).send('Error reading the images');
         return null; });
 
     if (!Listfiles) {

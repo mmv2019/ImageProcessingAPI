@@ -5,7 +5,7 @@ const ImagePath = path.resolve(__dirname, '../../../assets/Old/palmtunnel.jpg');
 const NewImagePath = path.resolve(__dirname, '../../../assets/New/palmtunnel.jpg');
 
 describe('The imageResizer', (): void => {
-    it('returns a buffer after sucessfully resizing an image', async () => {
+    it('resize the image and return buffer', async () => {
         const imageBuffer: Buffer = await help.resizedImage({
             height: 100,
             width: 150,
@@ -15,7 +15,7 @@ describe('The imageResizer', (): void => {
         expect(imageBuffer).toBeInstanceOf(Buffer);
     });
 
-    it('rejects promise if something went wrong', async (): Promise<void> => {
+    it('rejects if something wrong', async () => {
         await expectAsync(
             help.resizedImage({
                 height: 100,

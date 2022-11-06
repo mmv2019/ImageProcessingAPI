@@ -13,7 +13,7 @@ const resizedImage = async ({
     height,
     ImagePath,
     NewImagePath,
-}: ResizeImageProps): Promise<Buffer> => {
+}: ResizeImageProps) => {
     const data: Buffer | null = await fs.readFile(ImagePath).catch(() => null);
 
     if (!data) {

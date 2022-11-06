@@ -12,7 +12,7 @@ RouteImage.get('/', async (req: Request, res: Response): Promise<void> => {
     const width = req.query['width'] ? parseInt(req.query['width'] as string, 10) : null;
 
     if (!filename || !height || !width) {
-        res.status(400).send('Please make sure url contains correct filename, height and width params');
+        res.status(400).send('make sure url contains correct filename, height and width params');
         return;
     }
 
@@ -22,7 +22,7 @@ RouteImage.get('/', async (req: Request, res: Response): Promise<void> => {
 
     
     const fullImage: Stats | null = await fs.stat(ImagePath).catch(() => {
-        res.status(404).send('Image does not exist');
+        res.status(500).send('Image does not exist');
         return null;
     });
 
